@@ -7,69 +7,15 @@
 ### FLANG-ELECTRA
 
 ## FLUE: Financial Language Understanding Evaluation
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-</style>
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-1wig">Name</th>
-    <th class="tg-1wig">Task</th>
-    <th class="tg-1wig">Source</th>
-    <th class="tg-1wig">Dataset Size</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0lax">FPB</td>
-    <td class="tg-0lax">Financial Sentiment Analysis</td>
-    <td class="tg-0lax">Malo et al. 2014b</td>
-    <td class="tg-0lax">4,845</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">FiQA SA</td>
-    <td class="tg-0lax">Financial Sentiment Analysis</td>
-    <td class="tg-0lax">FiQA 2018</td>
-    <td class="tg-0lax">1,173</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">Headline</td>
-    <td class="tg-0lax">News Headline Classification</td>
-    <td class="tg-0lax">Sinha and Khandait 2020</td>
-    <td class="tg-0lax">11,412</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">NER</td>
-    <td class="tg-0lax">Named Entity Recognition</td>
-    <td class="tg-0lax">Alvarado et al. 2015</td>
-    <td class="tg-0lax">1,466</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">FinSBD3</td>
-    <td class="tg-0lax">Structure Boundary Detection</td>
-    <td class="tg-0lax">FinSBD3 (FinWeb-2021)</td>
-    <td class="tg-0lax">756</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">FiQA QA</td>
-    <td class="tg-0lax">Question Answering</td>
-    <td class="tg-0lax">FiQA 2018</td>
-    <td class="tg-0lax">6,640</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">Volatility</td>
-    <td class="tg-0lax">Volatility and Return Prediction</td>
-    <td class="tg-0lax">Ours</td>
-    <td class="tg-0lax">6,500</td>
-  </tr>
-</tbody>
-</table>
+| Name       | Task                             | Source                  | Dataset Size |
+|------------|----------------------------------|-------------------------|--------------|
+| FPB        | Financial Sentiment Analysis     | Malo et al. 2014b       | 4,845        |
+| FiQA SA    | Financial Sentiment Analysis     | FiQA 2018               | 1,173        |
+| Headline   | News Headline Classification     | Sinha and Khandait 2020 | 11,412       |
+| NER        | Named Entity Recognition         | Alvarado et al. 2015    | 1,466        |
+| FinSBD3    | Structure Boundary Detection     | FinSBD3 (FinWeb-2021)   | 756          |
+| FiQA QA    | Question Answering               | FiQA 2018               | 6,640        |
+| Volatility | Volatility and Return Prediction | Ours                    | 6,500        |
 
 ### Financial Sentiment Analysis
 1. Financial Phrase Bank (Classification)
