@@ -1,3 +1,5 @@
+# import required libraries
+
 import pandas as pd
 from transformers import ElectraTokenizerFast, ElectraForSequenceClassification
 from transformers import BertForSequenceClassification, BertTokenizerFast
@@ -13,7 +15,7 @@ assert gpu in ["0", "1", "2", "3"]
 os.environ["CUDA_VISIBLE_DEVICES"] = str(gpu)
 modelToUse = input("What model do you want to use?: ")
 assert (modelToUse in ['finbert', 'electra', 'bert', 'finelectra', 'bertflang'])
-df = pd.read_excel('CleanGoldHeadlineDataset.xlsx')#pd.read_excel('/datadrive/rawdata/CleanGoldHeadlineDataset.xlsx')
+df = pd.read_excel('CleanGoldHeadlineDataset.xlsx')
 headlines = df['News Headline'].to_list()
 labels = {}
 for column in df.columns:
@@ -52,10 +54,10 @@ testLength = int(len(dataset)  * 0.2)
 valLength = int(len(dataset) * 0.1)
 trainLength = len(dataset) - valLength - testLength 
 results = []
-SEEDS = [78516]#[78516, 944601, 5768]
+SEEDS = [78516, 944601, 5768]
 eps = 1e-2
 BS = [32, 16, 8, 4]
-LR = [1e-7, 1e-6, 1e-5, 1e-4, 1e-3]#[1e-7, 7e-7, 4e-6, 1e-5, 7e-5, 4e-4, 1e-3]
+LR = [1e-7, 1e-6, 1e-5, 1e-4, 1e-3]
 count = 0
 for i, seed in enumerate(SEEDS):
     for j, lr in enumerate(LR):
@@ -152,4 +154,4 @@ for i, seed in enumerate(SEEDS):
             testF1 = f1_score(actual.cpu().detach().numpy(), pred.cpu().detach().numpy(), average='weighted')
             results.append([seed, lr, bs, bestCE, bestAccuracy, bestF1, testCE, testAccuracy, testF1])
 df = pd.DataFrame(results, columns=["Seed", "Learning Rate", "Batch Size", "Val Cross Entropy", "Val Accuracy", "Val F1 Score", "Test Cross Entropy", "Test Accuracy", "Test F1 Score"])
-df.to_csv(f'GridSearchResults/Gold_{label}_{modelToUse}_experiment.csv', index=False)#df.to_csv(f'/datadrive/GridSearchResults/Gold_{label}_{modelToUse}_{len(LR)}.csv', index=False)
+df.to_csv(f'GridSearchResults/Gold_{label}_{modelToUse}__multiseed.csv', index=False)

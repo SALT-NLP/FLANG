@@ -1,3 +1,5 @@
+# import required libraries
+
 import json
 from transformers import BertForSequenceClassification, BertTokenizerFast, ElectraTokenizerFast, ElectraForSequenceClassification
 import torch
@@ -16,7 +18,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = str(gpu)
 modelToUse = input("What model do you want to use?: ")
 assert (modelToUse in ['finbert', 'electra', 'bert', 'finelectra', 'bertflang'])
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
-#device = torch.device('cpu')
+
 
 if modelToUse == 'finbert':
     tokenizer = BertTokenizerFast(vocab_file='/datadrive/FinVocab-Uncased.txt', do_lower_case=True, do_basic_tokenize=True)
@@ -73,11 +75,11 @@ valLength = int(len(dataset) * 0.1)
 trainLength = len(dataset) - valLength - testLength 
 print(trainLength, valLength, testLength)
 results = []
-SEEDS = [78516, 944601, 5768]#[78516]#[78516, 944601, 5768]
+SEEDS = [78516, 944601, 5768]
 eps = 1e-2
-BS = [4]#[32, 16, 8, 4, 2]
+BS = [32, 16, 8, 4, 2]
 count = 0
-LR = [1e-5]#[1e-7, 1e-6, 1e-5, 1e-4, 1e-3]#[1e-7, 7e-7, 4e-6, 1e-5, 7e-5, 4e-4, 1e-3]
+LR = [1e-7, 1e-6, 1e-5, 1e-4, 1e-3]
 start = time()
 for i, seed in enumerate(SEEDS):
     for j, lr in enumerate(LR):
