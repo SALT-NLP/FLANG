@@ -1,10 +1,60 @@
 # When FLUE Meets FLANG: Benchmarks and Large Pretrained Language Model for Financial Domain
 
+## Requirements
+
+The code requires Python 3.6+ with Pytorch 1.4+ and Huggingface library. Simple transformers library is needed for Electra models.
+
+## Data
+
+### Raw data
+
+The merged financial dictionary that we use for preferential finance word and phrase masking is in vocabulary/
+
+The raw data for the benchmarks is available at [Agam will add].
+
+A detailed description of datasets is available in [this word doc](https://docs.google.com/document/d/1oMvJgLtz3f0dHPcDvvx3q63WadgRSVdIy5qV-806oxM/edit?usp=sharing)
+
+
+### Processed data
+
+Data can be sampled from various datasets in different proportions. Two such data samples are in the above link: "data/newsonly" contains only news data (Reuters + Bloomberg), while "data/all" contains data sampled from all datasets.
+
+## Usage
+
+### Training language model
+
+To train BERT/RoBERTa/DistilBERT/DeBERTA and other language models, run
+
+    ./scripts/train_bert.sh
+
+To train Electra based models, use:
+
+    python scripts/train_electra.py
+    
+Please modify the parameters in the script according to specifications.
+
+### Fine-tune on downstream task
+
+For Financial PhraseBank sentiment classification task, use:
+
+    python scripts/fine_tune_bert.py
+    python scripts/fine_tune_electra.py
+
+For fine-tuing on more datasets, refer to code from [Dheeraj will add].
+
+### Code changes from basic libraries
+
+The code change from Huggingface/ SimpleTransformers library is in "src/"
+
 ## FLANG: Financial LANGuage model
 
 ### FLANG-BERT
 
+FLANG-BERT was trained based on BERT model.
+
 ### FLANG-ELECTRA
+FLANG-BERT was trained based on ELECTRA model.
+
 
 ## FLUE: Financial Language Understanding Evaluation
 | Name       | Task                             | Source                  | Dataset Size |
