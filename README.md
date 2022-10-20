@@ -15,12 +15,6 @@ FLANG is a set of large language models for Financial LANGuage tasks. These mode
 ## FLUE: Financial Language Understanding Evaluation
 FLUE (Financial Language Understanding Evaluation) is a comprehensive and heterogeneous benchmark that has been built from 5 diverse financial domain specific datasets.
 
-Sentiment Classification: [Financial PhraseBank](https://huggingface.co/datasets/financial_phrasebank)\
-Sentiment Analysis, Question Answering: [FiQA 2018](https://huggingface.co/datasets/SALT-NLP/FLUE-FiQA)\
-New Headlines Classification: [Headlines](https://www.kaggle.com/datasets/daittan/gold-commodity-news-and-dimensions)\
-Named Entity Recognition: [NER](https://paperswithcode.com/dataset/fin)\
-Structure Boundary Detection: [FinSBD3](https://sites.google.com/nlg.csie.ntu.edu.tw/finweb2021/shared-task-finsbd-3)
-
 
 | Name       | Task                             | Source                  | Dataset Size |
 |------------|----------------------------------|-------------------------|--------------|
@@ -34,26 +28,26 @@ Structure Boundary Detection: [FinSBD3](https://sites.google.com/nlg.csie.ntu.ed
 
 ### Financial Sentiment Analysis
 1. Financial PhraseBank (Classification)
-    * Data: [Financial PhraseBan](https://huggingface.co/datasets/financial_phrasebank)
+    * Data: [Financial PhraseBank](https://huggingface.co/datasets/financial_phrasebank)
     * Cite: ```Malo, Pekka, et al. "Good debt or bad debt: Detecting semantic orientations in economic texts." Journal of the Association for Information Science and Technology 65.4 (2014): 782-796.```
 2. FiQA 2018 Task-1 (Regression)
-    * Data and Ref: [FiQA 2018](https://sites.google.com/view/fiqa/home)
+    * Data and Ref: [FiQA 2018](https://huggingface.co/datasets/SALT-NLP/FLUE-FiQA)
     * Cite: ```Maia, Macedo & Handschuh, Siegfried & Freitas, Andre & Davis, Brian & McDermott, Ross & Zarrouk, Manel & Balahur, Alexandra. (2018). WWW'18 Open Challenge: Financial Opinion Mining and Question Answering. WWW '18: Companion Proceedings of the The Web Conference 2018. 1941-1942. 10.1145/3184558.3192301.``` 
 
 ### News Headline Classification
- * Data: [Gold Commodity News and Dimensions](https://www.kaggle.com/daittan/gold-commodity-news-and-dimensions/version/1)
+ * Data: [Gold Commodity News and Dimensions](https://www.kaggle.com/datasets/daittan/gold-commodity-news-and-dimensions)
  * Cite: ```Sinha, A., & Khandait, T. (2021, April). Impact of News on the Commodity Market: Dataset and Results. In Future of Information and Communication Conference (pp. 589-601). Springer, Cham.```
 
 ### Named Entity Recognition
- * Data: [NER Data on Loan Agreement](https://people.eng.unimelb.edu.au/tbaldwin/resources/finance-sec/)
+ * Data: [NER Data on Loan Agreement](https://paperswithcode.com/dataset/fin)
  * Cite: ```Alvarado, J. C. S., Verspoor, K., & Baldwin, T. (2015, December). Domain adaption of named entity recognition to support credit risk assessment. In Proceedings of the Australasian Language Technology Association Workshop 2015 (pp. 84-90).```
 
 ### Structure Boundary Detection
- * Data: [FinSBD-3](https://sites.google.com/nlg.csie.ntu.edu.tw/finweb2021/shared-task-finsbd-3)
+ * Data: [FinSBD3](https://sites.google.com/nlg.csie.ntu.edu.tw/finweb2021/shared-task-finsbd-3)
  * Cite: ```Willy Au, Abderrahim Ait-Azzi, and Juyeon Kang. 2021. FinSBD-2021: The 3rd Shared Task on Structure Boundary Detection in Unstructured Text in the Financial Domain. In Companion Proceedings of the Web Conference 2021 (WWW '21). Association for Computing Machinery, New York, NY, USA, 276–279. https://doi.org/10.1145/3442442.3451378```
 
 ### Question Answering
- * Data and Ref: [FiQA 2018](https://sites.google.com/view/fiqa/home)
+ * Data and Ref: [FiQA 2018](https://huggingface.co/datasets/SALT-NLP/FLUE-FiQA)
  * Cite: ```Maia, Macedo & Handschuh, Siegfried & Freitas, Andre & Davis, Brian & McDermott, Ross & Zarrouk, Manel & Balahur, Alexandra. (2018). WWW'18 Open Challenge: Financial Opinion Mining and Question Answering. WWW '18: Companion Proceedings of the The Web Conference 2018. 1941-1942. 10.1145/3184558.3192301.```
 
 
