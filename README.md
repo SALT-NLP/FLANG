@@ -31,7 +31,6 @@ Structure Boundary Detection: [FinSBD3](https://sites.google.com/nlg.csie.ntu.ed
 | FinSBD3    | Structure Boundary Detection     | FinSBD3 (FinWeb-2021)   | 756          |
 | FiQA QA    | Question Answering               | FiQA 2018               | 6,640        |
 
-The code for testing the FLUE Benchmarks is in /Benchmarks_Code
 
 ### Financial Sentiment Analysis
 1. Financial PhraseBank (Classification)
