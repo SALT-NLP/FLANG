@@ -4,6 +4,7 @@
 <p align="justify">
 Pre-trained language models have shown impressive performance on a variety of tasks and domains. Previous research on financial language models usually employs a generic training scheme to train standard model architectures, without completely leveraging the richness of the financial data. We propose a novel domain specific Financial LANGuage model (FLANG) which uses financial keywords and phrases for better masking, together with span boundary objective and in-filing objective. Additionally, the evaluation benchmarks in the field have been limited. To this end, we contribute the Financial Language Understanding Evaluation (FLUE), an open-source comprehensive suite of benchmarks for the financial domain. These include new benchmarks across 5 NLP tasks in financial domain as well as common benchmarks used in the previous research. Experiments on these benchmarks suggest that our model outperforms those in prior literature on a variety of NLP tasks. 
 </p>
+
 ## FLANG
 FLANG is a set of large language models for Financial LANGuage tasks. These models use domain specific pre-training with preferential masking to build more robust representations for the domain. The models in the set are:\
 [FLANG-BERT](https://huggingface.co/SALT-NLP/FLANG-BERT)\
