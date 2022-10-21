@@ -96,28 +96,3 @@ Please cite the model with the following citation:
 
 ## Contact information
 Please contact Raj Sanjay Shah (rajsanjayshah[at]gatech[dot]edu) or Sudheer Chava (schava6[at]gatech[dot]edu) or Diyi Yang (diyiy[at]stanford[dot]edu) about any issues and questions.
-
-
-## Steps to use the code
-
-1. Clone the Repo
-2. cd into the repo in your terminal
-
-## Dependencies
-Install dependencies with the following command
-pip install -r requirements.txt
-
-### Raw data
-
-tokens.npy contains the tokens for financial vocabulary in a numpy array format.
-
-
-
-To train FLANG-BERT, run
-
-    python train_FLANG_BERT.py
-
-To train FLANG-ELECTRA, run
-
-    python train_FLANG_ELECTRA.py
-    
