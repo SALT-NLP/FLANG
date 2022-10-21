@@ -1,3 +1,17 @@
+*.lock
+
+# Wandb
+wandb/
+
+# Outputs from examples
+**/cache_dir
+**/runs
+**/outputs
+**/data
+
+# manual_test_scripts
+test_scripts/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -91,12 +105,8 @@ ipython_config.py
 #   install all needed dependencies.
 #Pipfile.lock
 
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
-
-# Celery stuff
+# celery beat schedule file
 celerybeat-schedule
-celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
@@ -127,9 +137,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+#Stale Notebooks
+Untitled.ipynb
 
-# Editor config folders
-.idea/
-
-# MacOS custom attributes folder
-.DS_Store/
+# pycharm folders
+.idea
