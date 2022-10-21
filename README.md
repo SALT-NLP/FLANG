@@ -51,6 +51,8 @@ FLUE (Financial Language Understanding Evaluation) is a comprehensive and hetero
  * Data and Ref: [FiQA 2018](https://huggingface.co/datasets/SALT-NLP/FLUE-FiQA)
  * Cite: ```Maia, Macedo & Handschuh, Siegfried & Freitas, Andre & Davis, Brian & McDermott, Ross & Zarrouk, Manel & Balahur, Alexandra. (2018). WWW'18 Open Challenge: Financial Opinion Mining and Question Answering. WWW '18: Companion Proceedings of the The Web Conference 2018. 1941-1942. 10.1145/3184558.3192301.```
 
+## Leaderboard
+Coming soon!
 
 ## Citation
 Please cite the model with the following citation:
