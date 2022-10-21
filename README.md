@@ -5,13 +5,11 @@
 Pre-trained language models have shown impressive performance on a variety of tasks and domains. Previous research on financial language models usually employs a generic training scheme to train standard model architectures, without completely leveraging the richness of the financial data. We propose a novel domain specific Financial LANGuage model (FLANG) which uses financial keywords and phrases for better masking, together with span boundary objective and in-filing objective. Additionally, the evaluation benchmarks in the field have been limited. To this end, we contribute the Financial Language Understanding Evaluation (FLUE), an open-source comprehensive suite of benchmarks for the financial domain. These include new benchmarks across 5 NLP tasks in financial domain as well as common benchmarks used in the previous research. Experiments on these benchmarks suggest that our model outperforms those in prior literature on a variety of NLP tasks. 
 </p>
 
-## FLANG
-FLANG is a set of large language models for Financial LANGuage tasks. These models use domain specific pre-training with preferential masking to build more robust representations for the domain. The models in the set are:\
-[FLANG-BERT](https://huggingface.co/SALT-NLP/FLANG-BERT)\
-[FLANG-SpanBERT](https://huggingface.co/SALT-NLP/FLANG-SpanBERT)\
-[FLANG-DistilBERT](https://huggingface.co/SALT-NLP/FLANG-DistilBERT)\
-[FLANG-Roberta](https://huggingface.co/SALT-NLP/FLANG-Roberta)\
-[FLANG-ELECTRA](https://huggingface.co/SALT-NLP/FLANG-ELECTRA)
+
+## FLANG-ELECTRA Architecture
+![Architecture of our model. We use finance specific datasets and general English datasets (Wikpedia and BooksCorpus) for training the model. We follow the training strategy of ELECTRA with span boundary task which first predicts masked tokens using language model and then uses a discriminator to assess if a token is original or replaced. The generator and discriminator are trained end-to-end, and both words and phrases from financial vocabulary are used for masking. The final discriminator is then fine-tuned on individual tasks on our contributed benchmark suite, Financial Language Understanding Evaluation (FLUE). Note that our method is not specific to ELECTRA and can be generalized to other models.](/images/flang.jpg)
+<sub>Architecture of our model. We use finance specific datasets and general English datasets (Wikpedia and BooksCorpus) for training the model. We follow the training strategy of ELECTRA with span boundary task which first predicts masked tokens using language model and then uses a discriminator to assess if a token is original or replaced. The generator and discriminator are trained end-to-end, and both words and phrases from financial vocabulary are used for masking. The final discriminator is then fine-tuned on individual tasks on our contributed benchmark suite, Financial Language Understanding Evaluation (FLUE). Note that our method is not specific to ELECTRA and can be generalized to other models.</sub>
+
 
 ## FLUE: Financial Language Understanding Evaluation
 FLUE (Financial Language Understanding Evaluation) is a comprehensive and heterogeneous benchmark that has been built from 5 diverse financial domain specific datasets.
@@ -26,6 +24,16 @@ FLUE (Financial Language Understanding Evaluation) is a comprehensive and hetero
 | FinSBD3    | Structure Boundary Detection     | FinSBD3 (FinWeb-2021)   | 756          |
 | FiQA QA    | Question Answering               | FiQA 2018               | 6,640        |
 
+### Performance of FLANG Architecture of FLUE datasets
+
+| Model/Metric        | FPB      | FiQA SA | Headline | NER  | FinSBD3 | FiQA QA |
+| ------------------- | -------- | ------- | -------- | ---- | ------- | ------- |
+|                     | Accuracy | MSE     | Mean F-1 | F-1  | F-1     | nDCG    |
+| BERT-base           | 0.856    | 0.073   | 0.967    | 0.79 | 0.95    | 0.46    |
+| FinBERT             | 0.872    | 0.07    | 0.968    | 0.8  | 0.89    | 0.42    |
+| FLANG-BERT(ours)    | 0.912    | 0.054   | 0.972    | 0.83 | 0.96    | 0.51    |
+| ELECTRA             | 0.881    | 0.066   | 0.966    | 0.78 | 0.94    | 0.52    |
+| FLANG-ELECTRA(ours) | 0.919    | 0.034   | 0.98     | 0.82 | 0.97    | 0.55    |
 
 ### Financial Sentiment Analysis
 1. Financial PhraseBank (Classification)
