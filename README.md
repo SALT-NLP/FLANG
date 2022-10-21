@@ -11,7 +11,7 @@ FLANG is a set of large language models for Financial LANGuage tasks. These mode
 [FLANG-SpanBERT](https://huggingface.co/SALT-NLP/FLANG-SpanBERT)\
 [FLANG-DistilBERT](https://huggingface.co/SALT-NLP/FLANG-DistilBERT)\
 [FLANG-Roberta](https://huggingface.co/SALT-NLP/FLANG-Roberta)\
-[Flang-ELECTRA](https://huggingface.co/SALT-NLP/FLANG-ELECTRA)
+[FLANG-ELECTRA](https://huggingface.co/SALT-NLP/FLANG-ELECTRA)
 
 ## FLUE: Financial Language Understanding Evaluation
 FLUE (Financial Language Understanding Evaluation) is a comprehensive and heterogeneous benchmark that has been built from 5 diverse financial domain specific datasets.
