@@ -1,2 +1,0 @@
-from simpletransformers.config.model_args import RetrievalArgs
-from simpletransformers.retrieval.retrieval_model import RetrievalModel
