@@ -1,4 +1,5 @@
 # When FLUE Meets FLANG: Benchmarks and Large Pretrained Language Model for Financial Domain
+This is the website for the EMNLP 2022 Paper: When FLUE Meets FLANG: Benchmarks and Large Pretrained Language Model for Financial Domain
 
 ## Abstract
 <p align="justify">
@@ -34,6 +35,16 @@ FLUE (Financial Language Understanding Evaluation) is a comprehensive and hetero
 | FinSBD3    | Structure Boundary Detection     | FinSBD3 (FinWeb-2021)   | 756          |
 | FiQA QA    | Question Answering               | FiQA 2018               | 6,640        |
 
+### Performance of FLANG Architecture of FLUE datasets
+
+| Model/Metric        | FPB      | FiQA SA | Headline | NER  | FinSBD3 | FiQA QA |
+| ------------------- | -------- | ------- | -------- | ---- | ------- | ------- |
+|                     | Accuracy | MSE     | Mean F-1 | F-1  | F-1     | nDCG    |
+| BERT-base           | 0.856    | 0.073   | 0.967    | 0.79 | 0.95    | 0.46    |
+| FinBERT             | 0.872    | 0.07    | 0.968    | 0.8  | 0.89    | 0.42    |
+| FLANG-BERT(ours)    | 0.912    | 0.054   | 0.972    | 0.83 | 0.96    | 0.51    |
+| ELECTRA             | 0.881    | 0.066   | 0.966    | 0.78 | 0.94    | 0.52    |
+| FLANG-ELECTRA(ours) | 0.919    | 0.034   | 0.98     | 0.82 | 0.97    | 0.55    |
 
 ### Financial Sentiment Analysis
 1. Financial PhraseBank (Classification)
