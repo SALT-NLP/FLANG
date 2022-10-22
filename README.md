@@ -1,5 +1,4 @@
 # When FLUE Meets FLANG: Benchmarks and Large Pretrained Language Model for Financial Domain
-This is the website for the EMNLP 2022 Paper: When FLUE Meets FLANG: Benchmarks and Large Pretrained Language Model for Financial Domain
 
 ## Abstract
 <p align="justify">
